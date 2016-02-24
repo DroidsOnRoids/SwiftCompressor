@@ -3,10 +3,10 @@ Pod::Spec.new do |s|
   s.version          = "0.1.0"
   s.summary          = "Compression framework easily"
   s.description      = "SwiftCompressor lets you use Compression framework easily"
-  s.homepage         = "https://github.com/sochalewski/SwiftCompression"
+  s.homepage         = "https://github.com/DroidsOnRoids/SwiftCompressor"
   s.license          = 'MIT'
   s.author           = { "Piotr Sochalewski" => "piotr.sochalewski@droidsonroids.com" }
-  s.source           = { :git => "https://github.com/DroidsOnRoids/SwiftCompression.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/DroidsOnRoids/SwiftCompressor.git", :tag => s.version.to_s }
   s.ios.deployment_target = "9.0"
   s.osx.deployment_target = "10.11"
   s.requires_arc = true
