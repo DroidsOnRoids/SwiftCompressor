@@ -36,7 +36,7 @@ let decompressedData = try? compressedData??.decompress()
 
 // You can also choose one of four algorithms and set a buffer size if you want.
 // Available algorithms are LZFSE, LZMA, ZLIB and LZ4.
-// Compress without parameters uses LZFSE compression. Default buffer size is 4096 bytes.
+// Compression without parameters uses LZFSE algorithm. Default buffer size is 4096 bytes.
 let compressWithLZ4 = try? loremData?.compress(algorithm: .LZ4)
 let compressWithLZMAReallyBigBuffer = try? loremData?.compress(algorithm: .LZMA, bufferSize: 65_536)
 ```
