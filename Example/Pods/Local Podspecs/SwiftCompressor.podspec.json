@@ -1,0 +1,25 @@
+{
+  "name": "SwiftCompressor",
+  "version": "0.1.0",
+  "summary": "A short description of SwiftCompressor.",
+  "description": "",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/SwiftCompressor",
+  "license": "MIT",
+  "authors": {
+    "Piotr Sochalewski": "piotr.sochalewski@droidsonroids.pl"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/SwiftCompressor.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "requires_arc": true,
+  "source_files": "Pod/Classes/**/*",
+  "resource_bundles": {
+    "SwiftCompressor": [
+      "Pod/Assets/*.png"
+    ]
+  }
+}

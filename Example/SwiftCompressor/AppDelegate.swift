@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  SwiftCompressor
 //
-//  Created by Piotr Sochalewski on 02/24/2016.
-//  Copyright (c) 2016 Piotr Sochalewski. All rights reserved.
+//  Created by Piotr Sochalewski on 24.02.2016.
+//  Copyright (c) 2016 Droids on Roids. All rights reserved.
 //
 
 import UIKit
@@ -12,7 +12,6 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
@@ -41,6 +40,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
 }
-

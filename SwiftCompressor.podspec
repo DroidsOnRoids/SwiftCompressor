@@ -1,40 +1,17 @@
-#
-# Be sure to run `pod lib lint SwiftCompressor.podspec' to ensure this is a
-# valid spec before submitting.
-#
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
-#
-
 Pod::Spec.new do |s|
   s.name             = "SwiftCompressor"
   s.version          = "0.1.0"
-  s.summary          = "A short description of SwiftCompressor."
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!  
-  s.description      = <<-DESC
-                       DESC
-
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/SwiftCompressor"
-  # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
+  s.summary          = "Compression framework easily"
+  s.description      = "SwiftCompressor lets you use Compression framework easily"
+  s.homepage         = "https://github.com/sochalewski/SwiftCompression"
   s.license          = 'MIT'
-  s.author           = { "Piotr Sochalewski" => "piotr.sochalewski@droidsonroids.pl" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/SwiftCompressor.git", :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
-  s.platform     = :ios, '8.0'
+  s.author           = { "Piotr Sochalewski" => "piotr.sochalewski@droidsonroids.com" }
+  s.source           = { :git => "https://github.com/DroidsOnRoids/SwiftCompression.git", :tag => s.version.to_s }
+  s.ios.deployment_target = "9.0"
+  s.osx.deployment_target = "10.11"
   s.requires_arc = true
-
-  s.source_files = 'Pod/Classes/**/*'
-  s.resource_bundles = {
-    'SwiftCompressor' => ['Pod/Assets/*.png']
-  }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.source_files = '*.swift'
+  # .tbd linking doesn't work well
+  # s.library = 'compression'
+  s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-lcompression' }
 end

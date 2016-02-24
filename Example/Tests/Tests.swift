@@ -1,28 +1,52 @@
-import UIKit
 import XCTest
 import SwiftCompressor
 
 class Tests: XCTestCase {
     
+    var path = NSBundle.mainBundle().pathForResource("lorem", ofType: "txt")
+    var loremData: NSData!
+    
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        loremData = NSData(contentsOfFile: path!)
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
+    // MARK: - Compression and decompression
+    
+    func testCompressionAndDecompression() {
+        let compressedLoremData = try? loremData.compress()
+        let uncompressedLoremData = try? compressedLoremData??.decompress()
+        
+        XCTAssertGreaterThan(uncompressedLoremData!!.length, compressedLoremData!!.length, "The compressed data should be smaller than the uncompressed data.")
+        XCTAssertEqual(loremData, uncompressedLoremData!, "The data before compression and after decompression should be the same.")
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
+    // MARK: - Buffer size performance comparision
+    
+    func testPerformance4096() {
+        measureBlock {
+            for _ in 0...10000 {
+                let compressedLoremData = try? self.loremData.compress(algorithm: .ZLIB, bufferSize: 4096)
+                let _ = try? compressedLoremData??.decompress(algorithm: .ZLIB, bufferSize: 4096)
+            }
+        }
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock() {
-            // Put the code you want to measure the time of here.
+    func testPerformance8192() {
+        measureBlock {
+            for _ in 0...10000 {
+                let compressedLoremData = try? self.loremData.compress(algorithm: .ZLIB, bufferSize: 8192)
+                let _ = try? compressedLoremData??.decompress(algorithm: .ZLIB, bufferSize: 8192)
+            }
+        }
+    }
+    
+    func testPerformance16384() {
+        measureBlock {
+            for _ in 0...10000 {
+                let compressedLoremData = try? self.loremData.compress(algorithm: .ZLIB, bufferSize: 16384)
+                let _ = try? compressedLoremData??.decompress(algorithm: .ZLIB, bufferSize: 16384)
+            }
         }
     }
     
