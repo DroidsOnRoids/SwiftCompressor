@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "SwiftCompressor"
-  s.version          = "0.1.0"
+  s.version          = "0.1.1"
   s.summary          = "Compression framework easily"
   s.description      = "SwiftCompressor lets you use Compression framework easily"
   s.homepage         = "https://github.com/DroidsOnRoids/SwiftCompressor"

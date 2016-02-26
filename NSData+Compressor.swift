@@ -45,8 +45,19 @@ public enum CompressionAlgorithm {
 
 public enum CompressionError: ErrorType {
     
+    /**
+     The error received when trying to compress/decompress empty data (when length equals zero).
+     */
     case EmptyData
+    
+    /**
+     The error received when `compression_stream_init` failed. It also fails when trying to decompress `NSData` compressed with different compression algorithm or uncompressed raw data.
+     */
     case InitError
+    
+    /**
+     The error received when `compression_stream_process` failed.
+     */
     case ProcessError
     
 }
