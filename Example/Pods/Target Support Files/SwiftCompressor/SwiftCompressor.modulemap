@@ -1,0 +1,6 @@
+framework module SwiftCompressor {
+  umbrella header "SwiftCompressor-umbrella.h"
+
+  export *
+  module * { export * }
+}

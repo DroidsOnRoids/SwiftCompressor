@@ -7,15 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		264742E738A2D07F1ADDFD08AAB2627B /* NSData+Compressor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1589CF0AA75A92492D995212BDD5EC2 /* NSData+Compressor.swift */; };
+		338372EF35E1236510303E8FA06B3C2A /* SwiftCompressor-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A3B66ECBB688AA94447DD26B603E3B7E /* SwiftCompressor-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		34A5320E27FEECA1DE36D576048C5E28 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		39F77AEFD8A67D94FE5293227BEB755D /* SwiftCompressor.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AE46AAA330B61D4CD4A5BC510A94A6E0 /* SwiftCompressor.bundle */; };
 		414F655DCA5DACC5BD2C72981C2573B6 /* Pods-SwiftCompressor_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3EF6EE706D6201B54E9F5E2B3C11CE /* Pods-SwiftCompressor_Example-dummy.m */; };
 		50FE16BFA8CE7DDC7C0559C678A37026 /* Pods-SwiftCompressor_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC4BE66C97ED8A3054964A6C4057BD5 /* Pods-SwiftCompressor_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		71B3FA9022CB4D24995E902368825D5B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
 		735D77A2DB5F3CAA75E04084B92BB70A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
 		855D7081D0758CDBC8FAF19C9FB9EC92 /* Pods-SwiftCompressor_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F193137091A73C07BC62997D7D50359 /* Pods-SwiftCompressor_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8C07771C161BD7029E9FA39749DBA21C /* Pods-SwiftCompressor_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B7AEF95A1CBC6592C96AF68CEAC70BE5 /* Pods-SwiftCompressor_Tests-dummy.m */; };
-		AE6D77381C7DD197007D5ECC /* NSData+Compressor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6D77371C7DD197007D5ECC /* NSData+Compressor.swift */; };
+		D1C5470357CAF681E63723E2D75C5DC7 /* SwiftCompressor-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 62D5DB625636557A748AE68B8B033023 /* SwiftCompressor-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,43 +34,41 @@
 			remoteGlobalIDString = 170A9DF2A275515788C3E999D8C82BD8;
 			remoteInfo = SwiftCompressor;
 		};
-		D5BE0EE89A1876CA5E4336DF92ED4D25 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 36953B69C5FCBB8495FEBE8CB9D7DB99;
-			remoteInfo = "SwiftCompressor-SwiftCompressor";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0BBCAE9523D652E4248288FDCB3F1E8E /* Pods_SwiftCompressor_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftCompressor_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FCF0DE3DB0D781254D7DABC0A9A6058 /* Pods-SwiftCompressor_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SwiftCompressor_Example.modulemap"; sourceTree = "<group>"; };
 		2470168D6CF45024FC9DBB21796DA0CA /* Pods-SwiftCompressor_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftCompressor_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		2C94DE81E1DB8F60B04E2599D1CCB8F3 /* Pods-SwiftCompressor_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwiftCompressor_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		3991F56D56B51FA15217A9608A30DAD1 /* SwiftCompressor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftCompressor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		3F3416E8C520C9822ABAB86D7393CF33 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50A806B5CA88CD0022791E3D7B016A5C /* SwiftCompressor-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftCompressor-prefix.pch"; sourceTree = "<group>"; };
+		57B129E1DCF0DE3E2B0114EEF8311E80 /* SwiftCompressor.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftCompressor.xcconfig; sourceTree = "<group>"; };
 		60624DF63F5CDD53A42BD59E3887628B /* Pods-SwiftCompressor_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SwiftCompressor_Tests.modulemap"; sourceTree = "<group>"; };
 		60B0266F9D5524F9D6BF231F5ED1F076 /* Pods-SwiftCompressor_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftCompressor_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		62D5DB625636557A748AE68B8B033023 /* SwiftCompressor-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftCompressor-dummy.m"; sourceTree = "<group>"; };
+		6D2E9AFBDF5CFD0104986646160FB36A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70F3BDA3A4F4C33FFB921C05F0C41EFA /* SwiftCompressor.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftCompressor.modulemap; sourceTree = "<group>"; };
 		7236FB310A9F2F338377CBCDBC8C1C59 /* Pods-SwiftCompressor_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftCompressor_Example-frameworks.sh"; sourceTree = "<group>"; };
 		7F193137091A73C07BC62997D7D50359 /* Pods-SwiftCompressor_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SwiftCompressor_Example-umbrella.h"; sourceTree = "<group>"; };
 		8B73DE12E74CF23602C423ED255687D9 /* Pods-SwiftCompressor_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftCompressor_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		8BCA0D3E6623B3E8C1905B4A648C009E /* Pods-SwiftCompressor_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftCompressor_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		9D3F2692B0513BD5A5E46E3618DAAFF0 /* Pods-SwiftCompressor_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwiftCompressor_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		A3B66ECBB688AA94447DD26B603E3B7E /* SwiftCompressor-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftCompressor-umbrella.h"; sourceTree = "<group>"; };
 		AB3EF6EE706D6201B54E9F5E2B3C11CE /* Pods-SwiftCompressor_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwiftCompressor_Example-dummy.m"; sourceTree = "<group>"; };
-		AE46AAA330B61D4CD4A5BC510A94A6E0 /* SwiftCompressor.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftCompressor.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		AE6D77371C7DD197007D5ECC /* NSData+Compressor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSData+Compressor.swift"; sourceTree = "<group>"; };
-		AFE488D0CBB8133247E5E78097356BE9 /* Pods_SwiftCompressor_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftCompressor_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7AEF95A1CBC6592C96AF68CEAC70BE5 /* Pods-SwiftCompressor_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwiftCompressor_Tests-dummy.m"; sourceTree = "<group>"; };
 		B92C45B8B19DAB3A0F937D785C57CD60 /* Pods-SwiftCompressor_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftCompressor_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C1589CF0AA75A92492D995212BDD5EC2 /* NSData+Compressor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "NSData+Compressor.swift"; sourceTree = "<group>"; };
+		CE6929BE1E1F58336FB32610871068A9 /* SwiftCompressor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftCompressor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D78A7F47067DE0BF6C2BA18652D64F79 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D98C1D043F13192CEB14631416DBF6EB /* Pods-SwiftCompressor_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftCompressor_Example-resources.sh"; sourceTree = "<group>"; };
 		DCC4BE66C97ED8A3054964A6C4057BD5 /* Pods-SwiftCompressor_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SwiftCompressor_Tests-umbrella.h"; sourceTree = "<group>"; };
 		E7A54F41F5DEBC25AA67073F43240475 /* Pods-SwiftCompressor_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftCompressor_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED162AADB051E24D0719E303FDDD822C /* Pods-SwiftCompressor_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftCompressor_Tests-resources.sh"; sourceTree = "<group>"; };
 		EDA9656CEE5D2BEB0843A751A30361F5 /* Pods-SwiftCompressor_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftCompressor_Example.release.xcconfig"; sourceTree = "<group>"; };
+		EF541876184A7837C28AF646AB586F17 /* Pods_SwiftCompressor_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftCompressor_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3C676FE90BF157C5A5A8DB01FA6AB2F /* Pods_SwiftCompressor_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftCompressor_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,16 +96,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9EE6E45AE5303B3E3DAEEEF2119D788E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A140A231087284D9C4163D0D248EAF7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6D2E9AFBDF5CFD0104986646160FB36A /* Info.plist */,
+				70F3BDA3A4F4C33FFB921C05F0C41EFA /* SwiftCompressor.modulemap */,
+				57B129E1DCF0DE3E2B0114EEF8311E80 /* SwiftCompressor.xcconfig */,
+				62D5DB625636557A748AE68B8B033023 /* SwiftCompressor-dummy.m */,
+				50A806B5CA88CD0022791E3D7B016A5C /* SwiftCompressor-prefix.pch */,
+				A3B66ECBB688AA94447DD26B603E3B7E /* SwiftCompressor-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/SwiftCompressor";
+			sourceTree = "<group>";
+		};
 		63B1A2907A6145F7FAEF851023666679 /* Pods-SwiftCompressor_Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,24 +131,13 @@
 			path = "Target Support Files/Pods-SwiftCompressor_Tests";
 			sourceTree = "<group>";
 		};
-		6A492ED78FD97A5CAC43FF43DEF23949 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				AFE488D0CBB8133247E5E78097356BE9 /* Pods_SwiftCompressor_Example.framework */,
-				0BBCAE9523D652E4248288FDCB3F1E8E /* Pods_SwiftCompressor_Tests.framework */,
-				AE46AAA330B61D4CD4A5BC510A94A6E0 /* SwiftCompressor.bundle */,
-				3991F56D56B51FA15217A9608A30DAD1 /* SwiftCompressor.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
 				818FD705FACFB8C324B42DEF9CCDECDD /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				6A492ED78FD97A5CAC43FF43DEF23949 /* Products */,
+				899120441960031C7AC94D1A688AB28F /* Products */,
 				FB5427D13D5DBA044B7A295712F8A8B1 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -150,9 +145,19 @@
 		818FD705FACFB8C324B42DEF9CCDECDD /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F061B32C658E4712BC867AA95779CBE9 /* SwiftCompressor */,
+				E86DD707F96F5EF61BCCAF4B753A6223 /* SwiftCompressor */,
 			);
 			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		899120441960031C7AC94D1A688AB28F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F3C676FE90BF157C5A5A8DB01FA6AB2F /* Pods_SwiftCompressor_Example.framework */,
+				EF541876184A7837C28AF646AB586F17 /* Pods_SwiftCompressor_Tests.framework */,
+				CE6929BE1E1F58336FB32610871068A9 /* SwiftCompressor.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -171,10 +176,11 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		F061B32C658E4712BC867AA95779CBE9 /* SwiftCompressor */ = {
+		E86DD707F96F5EF61BCCAF4B753A6223 /* SwiftCompressor */ = {
 			isa = PBXGroup;
 			children = (
-				AE6D77371C7DD197007D5ECC /* NSData+Compressor.swift */,
+				C1589CF0AA75A92492D995212BDD5EC2 /* NSData+Compressor.swift */,
+				0A140A231087284D9C4163D0D248EAF7 /* Support Files */,
 			);
 			name = SwiftCompressor;
 			path = ../..;
@@ -222,6 +228,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				338372EF35E1236510303E8FA06B3C2A /* SwiftCompressor-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,37 +247,18 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CCD174E4FAC1825D1EC5F74E6F942700 /* Build configuration list for PBXNativeTarget "SwiftCompressor" */;
 			buildPhases = (
-				1D01BFC98C7703A540C99BD4F2AFE02A /* Sources */,
+				75CF7EA6EE03319BE845275316D04283 /* Sources */,
 				6053F57C2CAA6EEE6187865BC4142995 /* Frameworks */,
-				1F8CF5F3A4C4DC5A8B2C913C3C2E399D /* Resources */,
 				9BEBC1FB769EF693445F26C14C8FA35D /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				0B9807E4A8C808671C7F6CE398942094 /* PBXTargetDependency */,
 			);
 			name = SwiftCompressor;
 			productName = SwiftCompressor;
-			productReference = 3991F56D56B51FA15217A9608A30DAD1 /* SwiftCompressor.framework */;
+			productReference = CE6929BE1E1F58336FB32610871068A9 /* SwiftCompressor.framework */;
 			productType = "com.apple.product-type.framework";
-		};
-		36953B69C5FCBB8495FEBE8CB9D7DB99 /* SwiftCompressor-SwiftCompressor */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 92ED1C82912BC85AC17EDBA9D080BD71 /* Build configuration list for PBXNativeTarget "SwiftCompressor-SwiftCompressor" */;
-			buildPhases = (
-				C81D21DD7E1E759E1B3DB04CEF551F28 /* Sources */,
-				9EE6E45AE5303B3E3DAEEEF2119D788E /* Frameworks */,
-				7E8CAB5B1B23BD33F32BBF1853E1FE45 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "SwiftCompressor-SwiftCompressor";
-			productName = "SwiftCompressor-SwiftCompressor";
-			productReference = AE46AAA330B61D4CD4A5BC510A94A6E0 /* SwiftCompressor.bundle */;
-			productType = "com.apple.product-type.bundle";
 		};
 		8D12F15E989E0B2232A8991FFD46D718 /* Pods-SwiftCompressor_Tests */ = {
 			isa = PBXNativeTarget;
@@ -287,7 +275,7 @@
 			);
 			name = "Pods-SwiftCompressor_Tests";
 			productName = "Pods-SwiftCompressor_Tests";
-			productReference = 0BBCAE9523D652E4248288FDCB3F1E8E /* Pods_SwiftCompressor_Tests.framework */;
+			productReference = EF541876184A7837C28AF646AB586F17 /* Pods_SwiftCompressor_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		D3C1B357F41E9528E976A53C411ADD5B /* Pods-SwiftCompressor_Example */ = {
@@ -305,7 +293,7 @@
 			);
 			name = "Pods-SwiftCompressor_Example";
 			productName = "Pods-SwiftCompressor_Example";
-			productReference = AFE488D0CBB8133247E5E78097356BE9 /* Pods_SwiftCompressor_Example.framework */;
+			productReference = F3C676FE90BF157C5A5A8DB01FA6AB2F /* Pods_SwiftCompressor_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -314,7 +302,7 @@
 		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
@@ -325,44 +313,18 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 6A492ED78FD97A5CAC43FF43DEF23949 /* Products */;
+			productRefGroup = 899120441960031C7AC94D1A688AB28F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				D3C1B357F41E9528E976A53C411ADD5B /* Pods-SwiftCompressor_Example */,
 				8D12F15E989E0B2232A8991FFD46D718 /* Pods-SwiftCompressor_Tests */,
 				170A9DF2A275515788C3E999D8C82BD8 /* SwiftCompressor */,
-				36953B69C5FCBB8495FEBE8CB9D7DB99 /* SwiftCompressor-SwiftCompressor */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXResourcesBuildPhase section */
-		1F8CF5F3A4C4DC5A8B2C913C3C2E399D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				39F77AEFD8A67D94FE5293227BEB755D /* SwiftCompressor.bundle in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7E8CAB5B1B23BD33F32BBF1853E1FE45 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		1D01BFC98C7703A540C99BD4F2AFE02A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		2EF4AF99AD198252C7A919DB3E7EDC63 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -376,26 +338,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				414F655DCA5DACC5BD2C72981C2573B6 /* Pods-SwiftCompressor_Example-dummy.m in Sources */,
-				AE6D77381C7DD197007D5ECC /* NSData+Compressor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C81D21DD7E1E759E1B3DB04CEF551F28 /* Sources */ = {
+		75CF7EA6EE03319BE845275316D04283 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				264742E738A2D07F1ADDFD08AAB2627B /* NSData+Compressor.swift in Sources */,
+				D1C5470357CAF681E63723E2D75C5DC7 /* SwiftCompressor-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0B9807E4A8C808671C7F6CE398942094 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "SwiftCompressor-SwiftCompressor";
-			target = 36953B69C5FCBB8495FEBE8CB9D7DB99 /* SwiftCompressor-SwiftCompressor */;
-			targetProxy = D5BE0EE89A1876CA5E4336DF92ED4D25 /* PBXContainerItemProxy */;
-		};
 		31A6ECD379FE2893A02A0AE8E0A51217 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftCompressor;
@@ -411,52 +368,38 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		10DE1947DAC0ED28F6C0A9F9BD75D546 /* Release */ = {
+		23A82798A9ECF660422A987FA50D5A6D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7A54F41F5DEBC25AA67073F43240475 /* Pods-SwiftCompressor_Tests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		12763BCA74B91BBD8674AEE775EAC6BA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				PRODUCT_NAME = SwiftCompressor;
+				INFOPLIST_FILE = "Target Support Files/Pods-SwiftCompressor_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SwiftCompressor_Tests/Pods-SwiftCompressor_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_SwiftCompressor_Tests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		1C1B99D18D37EE89373CD167DBDE4064 /* Release */ = {
+		2A65D2357D793DF84C860F23E120234A /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B92C45B8B19DAB3A0F937D785C57CD60 /* Pods-SwiftCompressor_Tests.release.xcconfig */;
 			buildSettings = {
@@ -469,7 +412,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				INFOPLIST_FILE = "Target Support Files/Pods-SwiftCompressor_Tests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-SwiftCompressor_Tests/Pods-SwiftCompressor_Tests.modulemap";
@@ -486,11 +429,10 @@
 			};
 			name = Release;
 		};
-		3E2E95DA8C57329C2B77D6578941B0B0 /* Debug */ = {
+		532E5D41C40708EA2F23E86F59421393 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8BCA0D3E6623B3E8C1905B4A648C009E /* Pods-SwiftCompressor_Example.debug.xcconfig */;
+			baseConfigurationReference = 57B129E1DCF0DE3E2B0114EEF8311E80 /* SwiftCompressor.xcconfig */;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -498,17 +440,14 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-SwiftCompressor_Example/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftCompressor/SwiftCompressor-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftCompressor/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SwiftCompressor_Example/Pods-SwiftCompressor_Example.modulemap";
+				MODULEMAP_FILE = "Target Support Files/SwiftCompressor/SwiftCompressor.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_SwiftCompressor_Example;
+				PRODUCT_NAME = SwiftCompressor;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -518,7 +457,7 @@
 			};
 			name = Debug;
 		};
-		552D02D5BA751AC2E8790D2811D496CA /* Debug */ = {
+		5CE5176205D06FF3FFE3DDDA9291E44B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -550,86 +489,51 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				ONLY_ACTIVE_ARCH = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		578548222097EA31BB92B3E12BD15E63 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E7A54F41F5DEBC25AA67073F43240475 /* Pods-SwiftCompressor_Tests.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-SwiftCompressor_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SwiftCompressor_Tests/Pods-SwiftCompressor_Tests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_SwiftCompressor_Tests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		B4A43F0B1A482C8AEC57446D45836935 /* Release */ = {
+		74857149DC1E0D599B8A01A78349A926 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				PRODUCT_NAME = SwiftCompressor;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		BC38E31C66A51DA05D2CC082FD947D77 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftCompressor/SwiftCompressor-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftCompressor/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwiftCompressor/SwiftCompressor.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SwiftCompressor;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		C2DEE576CEAEA3FE00AE7501379CFBA1 /* Release */ = {
+		93406BF5EDCB91D0DF40560FD75D3B8F /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EDA9656CEE5D2BEB0843A751A30361F5 /* Pods-SwiftCompressor_Example.release.xcconfig */;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -639,7 +543,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				INFOPLIST_FILE = "Target Support Files/Pods-SwiftCompressor_Example/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-SwiftCompressor_Example/Pods-SwiftCompressor_Example.modulemap";
@@ -656,8 +560,9 @@
 			};
 			name = Release;
 		};
-		E7EDE08A65D3DAAAF40EC07348867692 /* Debug */ = {
+		CA9D45E170A520E936DB5AB0F23B7CAE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57B129E1DCF0DE3E2B0114EEF8311E80 /* SwiftCompressor.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -669,11 +574,41 @@
 				GCC_PREFIX_HEADER = "Target Support Files/SwiftCompressor/SwiftCompressor-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SwiftCompressor/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SwiftCompressor/SwiftCompressor.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = SwiftCompressor;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DBB7DBFD471E5E2C545F4FD1B968DF0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BCA0D3E6623B3E8C1905B4A648C009E /* Pods-SwiftCompressor_Example.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SwiftCompressor_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SwiftCompressor_Example/Pods-SwiftCompressor_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_SwiftCompressor_Example;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -689,17 +624,8 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				552D02D5BA751AC2E8790D2811D496CA /* Debug */,
-				10DE1947DAC0ED28F6C0A9F9BD75D546 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		92ED1C82912BC85AC17EDBA9D080BD71 /* Build configuration list for PBXNativeTarget "SwiftCompressor-SwiftCompressor" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				12763BCA74B91BBD8674AEE775EAC6BA /* Debug */,
-				B4A43F0B1A482C8AEC57446D45836935 /* Release */,
+				5CE5176205D06FF3FFE3DDDA9291E44B /* Debug */,
+				74857149DC1E0D599B8A01A78349A926 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -707,8 +633,8 @@
 		B8E08446AADAB0942DD300E290C151DA /* Build configuration list for PBXNativeTarget "Pods-SwiftCompressor_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				578548222097EA31BB92B3E12BD15E63 /* Debug */,
-				1C1B99D18D37EE89373CD167DBDE4064 /* Release */,
+				23A82798A9ECF660422A987FA50D5A6D /* Debug */,
+				2A65D2357D793DF84C860F23E120234A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -716,8 +642,8 @@
 		BFB1B0943A518006CC80AFBF24D6DD7E /* Build configuration list for PBXNativeTarget "Pods-SwiftCompressor_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3E2E95DA8C57329C2B77D6578941B0B0 /* Debug */,
-				C2DEE576CEAEA3FE00AE7501379CFBA1 /* Release */,
+				DBB7DBFD471E5E2C545F4FD1B968DF0C /* Debug */,
+				93406BF5EDCB91D0DF40560FD75D3B8F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -725,8 +651,8 @@
 		CCD174E4FAC1825D1EC5F74E6F942700 /* Build configuration list for PBXNativeTarget "SwiftCompressor" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E7EDE08A65D3DAAAF40EC07348867692 /* Debug */,
-				BC38E31C66A51DA05D2CC082FD947D77 /* Release */,
+				532E5D41C40708EA2F23E86F59421393 /* Debug */,
+				CA9D45E170A520E936DB5AB0F23B7CAE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

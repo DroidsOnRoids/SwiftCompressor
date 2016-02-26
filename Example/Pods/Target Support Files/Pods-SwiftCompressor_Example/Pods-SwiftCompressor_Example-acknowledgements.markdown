@@ -3,7 +3,7 @@ This application makes use of the following third party libraries:
 
 ## SwiftCompressor
 
-Copyright (c) 2016 Piotr Sochalewski <piotr.sochalewski@droidsonroids.pl>
+Copyright (c) 2016 Droids on Roids LLC
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

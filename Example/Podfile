@@ -7,6 +7,4 @@ end
 
 target 'SwiftCompressor_Tests', :exclusive => true do
   pod 'SwiftCompressor', :path => '../'
-
-  
 end

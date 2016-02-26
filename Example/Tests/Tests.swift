@@ -3,6 +3,8 @@ import SwiftCompressor
 
 class Tests: XCTestCase {
     
+    let repeatCount = 10000
+    
     var path = NSBundle.mainBundle().pathForResource("lorem", ofType: "txt")
     var loremData: NSData!
     
@@ -25,7 +27,7 @@ class Tests: XCTestCase {
     
     func testPerformance4096() {
         measureBlock {
-            for _ in 0...10000 {
+            for _ in 0...self.repeatCount {
                 let compressedLoremData = try? self.loremData.compress(algorithm: .ZLIB, bufferSize: 4096)
                 let _ = try? compressedLoremData??.decompress(algorithm: .ZLIB, bufferSize: 4096)
             }
@@ -34,7 +36,7 @@ class Tests: XCTestCase {
     
     func testPerformance8192() {
         measureBlock {
-            for _ in 0...10000 {
+            for _ in 0...self.repeatCount {
                 let compressedLoremData = try? self.loremData.compress(algorithm: .ZLIB, bufferSize: 8192)
                 let _ = try? compressedLoremData??.decompress(algorithm: .ZLIB, bufferSize: 8192)
             }
@@ -43,9 +45,43 @@ class Tests: XCTestCase {
     
     func testPerformance16384() {
         measureBlock {
-            for _ in 0...10000 {
+            for _ in 0...self.repeatCount {
                 let compressedLoremData = try? self.loremData.compress(algorithm: .ZLIB, bufferSize: 16384)
                 let _ = try? compressedLoremData??.decompress(algorithm: .ZLIB, bufferSize: 16384)
+            }
+        }
+    }
+    
+    // MARK: - Compression duration
+    
+    func testLZFSE() {
+        measureBlock {
+            for _ in 0...self.repeatCount {
+                _ = try? self.loremData.compress(algorithm: .LZFSE)
+            }
+        }
+    }
+    
+    func testLZ4() {
+        measureBlock {
+            for _ in 0...self.repeatCount {
+                _ = try? self.loremData.compress(algorithm: .LZ4)
+            }
+        }
+    }
+    
+    func testZLIB() {
+        measureBlock {
+            for _ in 0...self.repeatCount {
+                _ = try? self.loremData.compress(algorithm: .ZLIB)
+            }
+        }
+    }
+    
+    func testLZMA() {
+        measureBlock {
+            for _ in 0...10000 {
+                _ = try? self.loremData.compress(algorithm: .LZMA)
             }
         }
     }
