@@ -4,13 +4,13 @@
 [![License](https://img.shields.io/cocoapods/l/SwiftCompressor.svg?style=flat)](http://cocoapods.org/pods/SwiftCompressor)
 [![Platform](https://img.shields.io/cocoapods/p/SwiftCompressor.svg?style=flat)](http://cocoapods.org/pods/SwiftCompressor)
 
-## Usage
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
 ## Requirements
 
 iOS 9.0+ or OS X 10.11+, Swift 2.x
+
+## Example
+
+To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Installation
 
