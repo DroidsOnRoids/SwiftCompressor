@@ -1,5 +1,5 @@
 PODS:
-  - SwiftCompressor (0.1.1.1)
+  - SwiftCompressor (0.1.2)
 
 DEPENDENCIES:
   - SwiftCompressor (from `../`)
@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SwiftCompressor: 76c5dcce680055cedc4d9e7ea5ea988c560eef94
+  SwiftCompressor: e676bb72dc9233ffb1be4a2ddf5ed01c5b095110
 
 COCOAPODS: 0.39.0

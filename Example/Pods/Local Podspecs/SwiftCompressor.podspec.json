@@ -1,6 +1,6 @@
 {
   "name": "SwiftCompressor",
-  "version": "0.1.1.1",
+  "version": "0.1.2",
   "summary": "Compression framework easily",
   "description": "SwiftCompressor lets you use Compression framework easily",
   "homepage": "https://github.com/DroidsOnRoids/SwiftCompressor",
@@ -10,7 +10,7 @@
   },
   "source": {
     "git": "https://github.com/DroidsOnRoids/SwiftCompressor.git",
-    "tag": "0.1.1.1"
+    "tag": "0.1.2"
   },
   "platforms": {
     "ios": "9.0",

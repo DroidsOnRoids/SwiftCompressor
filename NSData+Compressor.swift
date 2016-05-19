@@ -18,7 +18,6 @@ import Compression
  */
 @available(iOS 9.0, OSX 10.11, *)
 public enum CompressionAlgorithm {
-    
     /**
      LZ4 is an extremely high-performance compressor.
      */
@@ -40,11 +39,9 @@ public enum CompressionAlgorithm {
      LZFSE is only present in iOS and OS X, so it can’t be used when the compressed payload has to be shared to other platforms (Linux, Windows). In all other cases, LZFSE is recommended as a replacement for ZLIB.
      */
     case LZFSE
-    
 }
 
 public enum CompressionError: ErrorType {
-    
     /**
      The error received when trying to compress/decompress empty data (when length equals zero).
      */
@@ -59,11 +56,9 @@ public enum CompressionError: ErrorType {
      The error received when `compression_stream_process` failed.
      */
     case ProcessError
-    
 }
 
 extension NSData {
-    
     /**
      Returns a `NSData` object created by compressing the receiver using the LZFSE algorithm.
      - returns: A `NSData` object created by encoding the receiver's contents using the LZFSE algorithm.
@@ -184,7 +179,6 @@ extension NSData {
         guard status != COMPRESSION_STATUS_ERROR else {
             throw CompressionError.InitError
         }
-        
         defer {
             compression_stream_destroy(&stream)
         }
@@ -223,5 +217,4 @@ extension NSData {
         
         return outputData.copy() as? NSData
     }
-    
 }

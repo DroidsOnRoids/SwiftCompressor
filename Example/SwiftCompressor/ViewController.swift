@@ -33,5 +33,4 @@ class ViewController: UIViewController {
         let decompressedLoremData = try? compressedLoremDataLZFSE??.decompress()
         print("Decompressed length: \(decompressedLoremData??.length)")
     }
-    
 }
