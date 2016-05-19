@@ -168,17 +168,27 @@ extension NSData {
         
         // Allocate memory for one object of type compression_stream
         let streamPointer = UnsafeMutablePointer<compression_stream>.alloc(1)
+        defer {
+            streamPointer.dealloc(1)
+        }
         
         // Stream and its buffer
         var stream = streamPointer.memory
         let dstBufferPointer = UnsafeMutablePointer<UInt8>.alloc(bufferSize)
+        defer {
+            dstBufferPointer.dealloc(bufferSize)
+        }
 
         // Create the compression_stream and throw an error if failed
         status = compression_stream_init(&stream, op, algorithm)
         guard status != COMPRESSION_STATUS_ERROR else {
             throw CompressionError.InitError
         }
-
+        
+        defer {
+            compression_stream_destroy(&stream)
+        }
+        
         // Stream setup after compression_stream_init
         stream.src_ptr = UnsafePointer<UInt8>(bytes)
         stream.src_size = length
@@ -210,8 +220,6 @@ extension NSData {
             }
             
         } while status == COMPRESSION_STATUS_OK
-        
-        compression_stream_destroy(&stream)
         
         return outputData.copy() as? NSData
     }
