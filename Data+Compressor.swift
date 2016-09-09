@@ -1,5 +1,5 @@
 //
-//  NSData+Compressor.swift
+//  Data+Compressor.swift
 //  SwiftCompressor
 //
 //  Created by Piotr Sochalewski on 22.02.2016.
@@ -11,125 +11,123 @@ import Compression
 
 /**
  Compression algorithm
- - `.LZ4`: Fast compression
- - `.ZLIB`: Balances between speed and compression
- - `.LZMA`: High compression
- - `.LZFSE`: Apple-specific high performance compression
+ - `.lz4`: Fast compression
+ - `.zlib`: Balances between speed and compression
+ - `.lzma`: High compression
+ - `.lzfse`: Apple-specific high performance compression
  */
 @available(iOS 9.0, OSX 10.11, *)
 public enum CompressionAlgorithm {
     /**
      LZ4 is an extremely high-performance compressor.
      */
-    case LZ4
+    case lz4
     
     /**
      ZLIB encoder at level 5 only. This compression level provides a good balance between compression speed and compression ratio. The ZLIB decoder supports decoding data compressed with any compression level.
      */
-    case ZLIB
+    case zlib
     
     /**
      LZMA encoder at level 6 only. This is the default compression level for open source LZMA, and provides excellent compression. The LZMA decoder supports decoding data compressed with any compression level.
      */
-    case LZMA
+    case lzma
     
     /**
      Apple’s proprietary compression algorithm. LZFSE is a new algorithm, matching the compression ratio of ZLIB level 5, but with much higher energy efficiency and speed (between 2x and 3x) for both encode and decode operations.
      
      LZFSE is only present in iOS and OS X, so it can’t be used when the compressed payload has to be shared to other platforms (Linux, Windows). In all other cases, LZFSE is recommended as a replacement for ZLIB.
      */
-    case LZFSE
+    case lzfse
 }
 
-public enum CompressionError: ErrorType {
+public enum CompressionError: Error {
     /**
      The error received when trying to compress/decompress empty data (when length equals zero).
      */
-    case EmptyData
+    case emptyData
     
     /**
-     The error received when `compression_stream_init` failed. It also fails when trying to decompress `NSData` compressed with different compression algorithm or uncompressed raw data.
+     The error received when `compression_stream_init` failed. It also fails when trying to decompress `Data` compressed with different compression algorithm or uncompressed raw data.
      */
-    case InitError
+    case initError
     
     /**
      The error received when `compression_stream_process` failed.
      */
-    case ProcessError
+    case processError
 }
 
-extension NSData {
+extension Data {
     /**
-     Returns a `NSData` object created by compressing the receiver using the LZFSE algorithm.
-     - returns: A `NSData` object created by encoding the receiver's contents using the LZFSE algorithm.
+     Returns a `Data` object created by compressing the receiver using the LZFSE algorithm.
+     - returns: A `Data` object created by encoding the receiver's contents using the LZFSE algorithm.
      */
     @available(iOS 9.0, OSX 10.11, *)
-    public func compress() throws -> NSData? {
-        return try compress(algorithm: .LZFSE, bufferSize: 4096)
+    public func compress() throws -> Data? {
+        return try compress(algorithm: .lzfse, bufferSize: 4096)
     }
     
     /**
-     Returns a `NSData` object created by compressing the receiver using the given compression algorithm.
+     Returns a `Data` object created by compressing the receiver using the given compression algorithm.
      - parameter algorithm: one of four compression algorithms to use during compression
-     - returns: A `NSData` object created by encoding the receiver's contents using the provided compression algorithm.
+     - returns: A `Data` object created by encoding the receiver's contents using the provided compression algorithm.
      */
     @available(iOS 9.0, OSX 10.11, *)
-    public func compress(algorithm compression: CompressionAlgorithm) throws -> NSData? {
+    public func compress(algorithm compression: CompressionAlgorithm) throws -> Data? {
         return try compress(algorithm: compression, bufferSize: 4096)
     }
     
     /**
-     Returns a NSData object created by compressing the receiver using the given compression algorithm.
+     Returns a Data object created by compressing the receiver using the given compression algorithm.
      - parameter algorithm: one of four compression algorithms to use during compression
      - parameter bufferSize: the size of buffer in bytes to use during compression
-     - returns: A `NSData` object created by encoding the receiver's contents using the provided compression algorithm.
+     - returns: A `Data` object created by encoding the receiver's contents using the provided compression algorithm.
      */
     @available(iOS 9.0, OSX 10.11, *)
-    public func compress(algorithm compression: CompressionAlgorithm, bufferSize: size_t) throws -> NSData? {
-        return try compress(compression, operation: .Compression, bufferSize: bufferSize)
+    public func compress(algorithm compression: CompressionAlgorithm, bufferSize: size_t) throws -> Data? {
+        return try compress(compression, operation: .compression, bufferSize: bufferSize)
     }
     
     /**
-     Returns a `NSData` object by uncompressing the receiver using the LZFSE algorithm.
-     - returns: A `NSData` object created by decoding the receiver's contents using the LZFSE algorithm.
+     Returns a `Data` object by uncompressing the receiver using the LZFSE algorithm.
+     - returns: A `Data` object created by decoding the receiver's contents using the LZFSE algorithm.
      */
     @available(iOS 9.0, OSX 10.11, *)
-    public func decompress() throws -> NSData? {
-        return try decompress(algorithm: .LZFSE, bufferSize: 4096)
+    public func decompress() throws -> Data? {
+        return try decompress(algorithm: .lzfse, bufferSize: 4096)
     }
     
     /**
-     Returns a `NSData` object by uncompressing the receiver using the given compression algorithm.
+     Returns a `Data` object by uncompressing the receiver using the given compression algorithm.
      - parameter algorithm: one of four compression algorithms to use during decompression
-     - returns: A `NSData` object created by decoding the receiver's contents using the provided compression algorithm.
+     - returns: A `Data` object created by decoding the receiver's contents using the provided compression algorithm.
      */
     @available(iOS 9.0, OSX 10.11, *)
-    public func decompress(algorithm compression: CompressionAlgorithm) throws -> NSData? {
+    public func decompress(algorithm compression: CompressionAlgorithm) throws -> Data? {
         return try decompress(algorithm: compression, bufferSize: 4096)
     }
     
     /**
-     Returns a `NSData` object by uncompressing the receiver using the given compression algorithm.
+     Returns a `Data` object by uncompressing the receiver using the given compression algorithm.
      - parameter algorithm: one of four compression algorithms to use during decompression
      - parameter bufferSize: the size of buffer in bytes to use during decompression
-     - returns: A `NSData` object created by decoding the receiver's contents using the provided compression algorithm.
+     - returns: A `Data` object created by decoding the receiver's contents using the provided compression algorithm.
      */
     @available(iOS 9.0, OSX 10.11, *)
-    public func decompress(algorithm compression: CompressionAlgorithm, bufferSize: size_t) throws -> NSData? {
-        return try compress(compression, operation: .Decompression, bufferSize: bufferSize)
+    public func decompress(algorithm compression: CompressionAlgorithm, bufferSize: size_t) throws -> Data? {
+        return try compress(compression, operation: .decompression, bufferSize: bufferSize)
     }
     
-    private enum Operation {
-        case Compression
-        case Decompression
+    fileprivate enum Operation {
+        case compression
+        case decompression
     }
     
     @available(iOS 9.0, OSX 10.11, *)
-    private func compress(compression: CompressionAlgorithm, operation: Operation, bufferSize: size_t) throws -> NSData? {
+    fileprivate func compress(_ compression: CompressionAlgorithm, operation: Operation, bufferSize: size_t) throws -> Data? {
         // Throw an error when data to (de)compress is empty.
-        guard length > 0 else {
-            throw CompressionError.EmptyData
-        }
+        guard count > 0 else { throw CompressionError.emptyData }
         
         // Variables
         var status: compression_status
@@ -141,51 +139,54 @@ extension NSData {
         let outputData = NSMutableData()
         
         switch compression {
-        case .LZ4:
+        case .lz4:
             algorithm = COMPRESSION_LZ4
-        case .ZLIB:
+        case .zlib:
             algorithm = COMPRESSION_ZLIB
-        case .LZMA:
+        case .lzma:
             algorithm = COMPRESSION_LZMA
-        case .LZFSE:
+        case .lzfse:
             algorithm = COMPRESSION_LZFSE
         }
 
         // Setup stream operation and flags depending on compress/decompress operation type
         switch operation {
-        case .Compression:
+        case .compression:
             op = COMPRESSION_STREAM_ENCODE
             flags = Int32(COMPRESSION_STREAM_FINALIZE.rawValue)
-        case .Decompression:
+        case .decompression:
             op = COMPRESSION_STREAM_DECODE
             flags = 0
         }
         
         // Allocate memory for one object of type compression_stream
-        let streamPointer = UnsafeMutablePointer<compression_stream>.alloc(1)
+        let streamPointer = UnsafeMutablePointer<compression_stream>.allocate(capacity: 1)
         defer {
-            streamPointer.dealloc(1)
+            streamPointer.deallocate(capacity: 1)
         }
         
         // Stream and its buffer
-        var stream = streamPointer.memory
-        let dstBufferPointer = UnsafeMutablePointer<UInt8>.alloc(bufferSize)
+        var stream = streamPointer.pointee
+        let dstBufferPointer = UnsafeMutablePointer<UInt8>.allocate(capacity: bufferSize)
         defer {
-            dstBufferPointer.dealloc(bufferSize)
+            dstBufferPointer.deallocate(capacity: bufferSize)
         }
 
         // Create the compression_stream and throw an error if failed
         status = compression_stream_init(&stream, op, algorithm)
         guard status != COMPRESSION_STATUS_ERROR else {
-            throw CompressionError.InitError
+            throw CompressionError.initError
         }
         defer {
             compression_stream_destroy(&stream)
         }
         
         // Stream setup after compression_stream_init
-        stream.src_ptr = UnsafePointer<UInt8>(bytes)
-        stream.src_size = length
+        withUnsafeBytes { (bytes: UnsafePointer<UInt8>) in
+            stream.src_ptr = bytes
+        }
+        
+        stream.src_size = count
         stream.dst_ptr = dstBufferPointer
         stream.dst_size = bufferSize
         
@@ -195,7 +196,7 @@ extension NSData {
             switch status {
             case COMPRESSION_STATUS_OK:
                 if stream.dst_size == 0 {
-                    outputData.appendBytes(dstBufferPointer, length: bufferSize)
+                    outputData.append(dstBufferPointer, length: bufferSize)
                     
                     stream.dst_ptr = dstBufferPointer
                     stream.dst_size = bufferSize
@@ -203,11 +204,11 @@ extension NSData {
                 
             case COMPRESSION_STATUS_END:
                 if stream.dst_ptr > dstBufferPointer {
-                    outputData.appendBytes(dstBufferPointer, length: stream.dst_ptr - dstBufferPointer)
+                    outputData.append(dstBufferPointer, length: stream.dst_ptr - dstBufferPointer)
                 }
                 
             case COMPRESSION_STATUS_ERROR:
-                throw CompressionError.ProcessError
+                throw CompressionError.processError
                 
             default:
                 break
@@ -215,6 +216,6 @@ extension NSData {
             
         } while status == COMPRESSION_STATUS_OK
         
-        return outputData.copy() as? NSData
+        return outputData.copy() as? Data
     }
 }

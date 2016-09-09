@@ -11,26 +11,26 @@ import SwiftCompressor
 
 class ViewController: UIViewController {
 
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        let path = NSBundle.mainBundle().pathForResource("lorem", ofType: "txt")
-        let loremData = NSData(contentsOfFile: path!)
-        print("Raw length: \(loremData?.length)")
+        let path = URL(fileURLWithPath: Bundle.main.path(forResource: "lorem", ofType: "txt")!)
+        let loremData = try? Data(contentsOf: path)
+        print("Raw length: \(loremData?.count)")
         
         let compressedLoremDataLZFSE = try? loremData?.compress()
-        print("LZFSE length: \(compressedLoremDataLZFSE??.length)")
+        print("LZFSE length: \(compressedLoremDataLZFSE??.count)")
         
-        let compressedLoremDataZLIB = try? loremData?.compress(algorithm: .ZLIB)
-        print("ZLIB length: \(compressedLoremDataZLIB??.length)")
+        let compressedLoremDataZLIB = try? loremData?.compress(algorithm: .zlib)
+        print("ZLIB length: \(compressedLoremDataZLIB??.count)")
         
-        let compressedLoremDataLZ4 = try? loremData?.compress(algorithm: .LZ4)
-        print("LZ4 length: \(compressedLoremDataLZ4??.length)")
+        let compressedLoremDataLZ4 = try? loremData?.compress(algorithm: .lz4)
+        print("LZ4 length: \(compressedLoremDataLZ4??.count)")
         
-        let compressedLoremDataLZMA = try? loremData?.compress(algorithm: .LZMA)
-        print("LZMA length: \(compressedLoremDataLZMA??.length)")
+        let compressedLoremDataLZMA = try? loremData?.compress(algorithm: .lzma)
+        print("LZMA length: \(compressedLoremDataLZMA??.count)")
         
         let decompressedLoremData = try? compressedLoremDataLZFSE??.decompress()
-        print("Decompressed length: \(decompressedLoremData??.length)")
+        print("Decompressed length: \(decompressedLoremData??.count)")
     }
 }

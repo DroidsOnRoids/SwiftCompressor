@@ -5,12 +5,12 @@ class Tests: XCTestCase {
     
     let repeatCount = 10000
     
-    var path = NSBundle.mainBundle().pathForResource("lorem", ofType: "txt")
-    var loremData: NSData!
+    let path = URL(fileURLWithPath: Bundle.main.path(forResource: "lorem", ofType: "txt")!)
+    var loremData: Data!
     
     override func setUp() {
         super.setUp()
-        loremData = NSData(contentsOfFile: path!)
+        loremData = try? Data(contentsOf: path)
     }
     
     // MARK: - Compression and decompression
@@ -19,35 +19,35 @@ class Tests: XCTestCase {
         let compressedLoremData = try? loremData.compress()
         let uncompressedLoremData = try? compressedLoremData??.decompress()
         
-        XCTAssertGreaterThan(uncompressedLoremData!!.length, compressedLoremData!!.length, "The compressed data should be smaller than the uncompressed data.")
+        XCTAssertGreaterThan(uncompressedLoremData!!.count, compressedLoremData!!.count, "The compressed data should be smaller than the uncompressed data.")
         XCTAssertEqual(loremData, uncompressedLoremData!, "The data before compression and after decompression should be the same.")
     }
     
     // MARK: - Buffer size performance comparision
     
     func testPerformance4096() {
-        measureBlock {
+        measure {
             for _ in 0...self.repeatCount {
-                let compressedLoremData = try? self.loremData.compress(algorithm: .ZLIB, bufferSize: 4096)
-                let _ = try? compressedLoremData??.decompress(algorithm: .ZLIB, bufferSize: 4096)
+                let compressedLoremData = try? self.loremData.compress(algorithm: .zlib, bufferSize: 4096)
+                let _ = try? compressedLoremData??.decompress(algorithm: .zlib, bufferSize: 4096)
             }
         }
     }
     
     func testPerformance8192() {
-        measureBlock {
+        measure {
             for _ in 0...self.repeatCount {
-                let compressedLoremData = try? self.loremData.compress(algorithm: .ZLIB, bufferSize: 8192)
-                let _ = try? compressedLoremData??.decompress(algorithm: .ZLIB, bufferSize: 8192)
+                let compressedLoremData = try? self.loremData.compress(algorithm: .zlib, bufferSize: 8192)
+                let _ = try? compressedLoremData??.decompress(algorithm: .zlib, bufferSize: 8192)
             }
         }
     }
     
     func testPerformance16384() {
-        measureBlock {
+        measure {
             for _ in 0...self.repeatCount {
-                let compressedLoremData = try? self.loremData.compress(algorithm: .ZLIB, bufferSize: 16384)
-                let _ = try? compressedLoremData??.decompress(algorithm: .ZLIB, bufferSize: 16384)
+                let compressedLoremData = try? self.loremData.compress(algorithm: .zlib, bufferSize: 16384)
+                let _ = try? compressedLoremData??.decompress(algorithm: .zlib, bufferSize: 16384)
             }
         }
     }
@@ -55,35 +55,34 @@ class Tests: XCTestCase {
     // MARK: - Compression duration
     
     func testLZFSE() {
-        measureBlock {
+        measure {
             for _ in 0...self.repeatCount {
-                _ = try? self.loremData.compress(algorithm: .LZFSE)
+                _ = try? self.loremData.compress(algorithm: .lzfse)
             }
         }
     }
     
     func testLZ4() {
-        measureBlock {
+        measure {
             for _ in 0...self.repeatCount {
-                _ = try? self.loremData.compress(algorithm: .LZ4)
+                _ = try? self.loremData.compress(algorithm: .lz4)
             }
         }
     }
     
     func testZLIB() {
-        measureBlock {
+        measure {
             for _ in 0...self.repeatCount {
-                _ = try? self.loremData.compress(algorithm: .ZLIB)
+                _ = try? self.loremData.compress(algorithm: .zlib)
             }
         }
     }
     
     func testLZMA() {
-        measureBlock {
-            for _ in 0...10000 {
-                _ = try? self.loremData.compress(algorithm: .LZMA)
+        measure {
+            for _ in 0...self.repeatCount {
+                _ = try? self.loremData.compress(algorithm: .lzma)
             }
         }
     }
-    
 }

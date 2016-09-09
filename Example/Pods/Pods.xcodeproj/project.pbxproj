@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		264742E738A2D07F1ADDFD08AAB2627B /* NSData+Compressor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1589CF0AA75A92492D995212BDD5EC2 /* NSData+Compressor.swift */; };
+		264742E738A2D07F1ADDFD08AAB2627B /* Data+Compressor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1589CF0AA75A92492D995212BDD5EC2 /* Data+Compressor.swift */; };
 		338372EF35E1236510303E8FA06B3C2A /* SwiftCompressor-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A3B66ECBB688AA94447DD26B603E3B7E /* SwiftCompressor-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		34A5320E27FEECA1DE36D576048C5E28 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
 		414F655DCA5DACC5BD2C72981C2573B6 /* Pods-SwiftCompressor_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3EF6EE706D6201B54E9F5E2B3C11CE /* Pods-SwiftCompressor_Example-dummy.m */; };
@@ -59,7 +59,7 @@
 		B7AEF95A1CBC6592C96AF68CEAC70BE5 /* Pods-SwiftCompressor_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwiftCompressor_Tests-dummy.m"; sourceTree = "<group>"; };
 		B92C45B8B19DAB3A0F937D785C57CD60 /* Pods-SwiftCompressor_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftCompressor_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		C1589CF0AA75A92492D995212BDD5EC2 /* NSData+Compressor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "NSData+Compressor.swift"; sourceTree = "<group>"; };
+		C1589CF0AA75A92492D995212BDD5EC2 /* Data+Compressor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Data+Compressor.swift"; sourceTree = "<group>"; };
 		CE6929BE1E1F58336FB32610871068A9 /* SwiftCompressor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftCompressor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D78A7F47067DE0BF6C2BA18652D64F79 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D98C1D043F13192CEB14631416DBF6EB /* Pods-SwiftCompressor_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftCompressor_Example-resources.sh"; sourceTree = "<group>"; };
@@ -179,7 +179,7 @@
 		E86DD707F96F5EF61BCCAF4B753A6223 /* SwiftCompressor */ = {
 			isa = PBXGroup;
 			children = (
-				C1589CF0AA75A92492D995212BDD5EC2 /* NSData+Compressor.swift */,
+				C1589CF0AA75A92492D995212BDD5EC2 /* Data+Compressor.swift */,
 				0A140A231087284D9C4163D0D248EAF7 /* Support Files */,
 			);
 			name = SwiftCompressor;
@@ -304,6 +304,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0730;
+				TargetAttributes = {
+					170A9DF2A275515788C3E999D8C82BD8 = {
+						LastSwiftMigration = 0800;
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -345,7 +350,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				264742E738A2D07F1ADDFD08AAB2627B /* NSData+Compressor.swift in Sources */,
+				264742E738A2D07F1ADDFD08AAB2627B /* Data+Compressor.swift in Sources */,
 				D1C5470357CAF681E63723E2D75C5DC7 /* SwiftCompressor-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -454,6 +459,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -587,6 +593,7 @@
 				PRODUCT_NAME = SwiftCompressor;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
