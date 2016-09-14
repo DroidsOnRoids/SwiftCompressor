@@ -6,7 +6,9 @@
 
 ## Requirements
 
-iOS 9.0+ or OS X 10.11+, Swift 3
+iOS 9.0+, macOS 10.11+, watchOS 2.0+, tvOS 9.0+
+
+Swift 3
 
 ## Example
 
@@ -18,7 +20,7 @@ SwiftCompressor is available through [CocoaPods](http://cocoapods.org). To insta
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "SwiftCompressor", :git => 'https://github.com/DroidsOnRoids/SwiftCompressor', :branch => 'swift3'
+pod "SwiftCompressor"
 ```
 
 ## Usage
