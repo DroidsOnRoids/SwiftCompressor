@@ -18,7 +18,7 @@ SwiftCompressor is available through [CocoaPods](http://cocoapods.org). To insta
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "SwiftCompressor"
+pod "SwiftCompressor", :git => "https://github.com/DroidsOnRoids/SwiftCompressor", :branch => "swift-2.2"
 ```
 
 ## Usage
