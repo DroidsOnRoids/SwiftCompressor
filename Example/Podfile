@@ -1,10 +1,9 @@
-source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
-target 'SwiftCompressor_Example', :exclusive => true do
+target 'SwiftCompressor_Example' do
   pod 'SwiftCompressor', :path => '../'
-end
 
-target 'SwiftCompressor_Tests', :exclusive => true do
-  pod 'SwiftCompressor', :path => '../'
+  target 'SwiftCompressor_Tests' do
+    inherit! :search_paths
+  end
 end

@@ -3,7 +3,7 @@ import SwiftCompressor
 
 class Tests: XCTestCase {
     
-    let repeatCount = 10000
+    let repeatCount = 1000
     
     let path = URL(fileURLWithPath: Bundle.main.path(forResource: "lorem", ofType: "txt")!)
     var loremData: Data!

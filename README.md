@@ -1,5 +1,7 @@
 # SwiftCompressor
 
+[![CI Status](http://img.shields.io/travis/DroidsOnRoids/SwiftCompressor.svg?style=flat)](https://travis-ci.org/DroidsOnRoids/SwiftCompressor)
+[![codecov](https://codecov.io/gh/DroidsOnRoids/SwiftCompressor/branch/master/graph/badge.svg)](https://codecov.io/gh/DroidsOnRoids/SwiftCompressor)
 [![Version](https://img.shields.io/cocoapods/v/SwiftCompressor.svg?style=flat)](http://cocoapods.org/pods/SwiftCompressor)
 [![License](https://img.shields.io/cocoapods/l/SwiftCompressor.svg?style=flat)](http://cocoapods.org/pods/SwiftCompressor)
 [![Platform](https://img.shields.io/cocoapods/p/SwiftCompressor.svg?style=flat)](http://cocoapods.org/pods/SwiftCompressor)
